@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shivansh Gupta">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume Builder</title>
+</head>
+<body>
+    
+    <!-- Resume Form -->
+    <div class="container" id="resume-form">
+        <h1 class="text-center my-2">Resume Builder</h1>
+        <p class="text-center">Form Crafted Portfolio</p>
+
+        <div class="row">
+
+            <!-- Personal Information -->
+            <div class="col-md-6">
+
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter Here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="contactField">Your Contact</label>
+                    <input type="number" id="contactField" placeholder="Enter Here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="aboutField">About You</label>
+                    <textarea id="aboutField" placeholder="Write Here" class="form-control" rows="3"></textarea>
+                </div>
+
+                <!-- Profile Image 
+                <div class="form-group mt-2">
+                    <label for="imgField">Select your profile picture</label>
+                    <input id="imgField" type="file" class="form-control">
+                </div> -->
+                
+                <!-- Important Links -->
+                <p class="text-secondary mt-4">Important Links</p>
+                <div class="form-group mt-2">
+                    <label for="linkedinField">Linkedin Link</label>
+                    <input type="text" id="linkedinField" placeholder="Enter Here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="githubField">Github Link</label>
+                    <input type="text" id="githubField" placeholder="Enter Here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="gmailField">Mail Link</label>
+                    <input type="text" id="gmailField" placeholder="Enter Here" class="form-control">
+                </div>
+
+                <!--Academic Qualification-->
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Education</label>
+                </div>
+                <div class="container text-center mt-2" id="aqAddButton">
+                    <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+
+            </div>
+
+            <!-- Professional Information -->
+            <div class="col-md-6">
+
+                <h3>Professional Information</h3>
+                <!-- Work Experience -->
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                </div>
+                <div class="container text-center mt-2" id="weAddButton">
+                    <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+
+                <!-- Projects -->
+                <div class="form-group mt-2" id="projects">
+                    <label for="">Projects</label>
+                </div>
+                <div class="container text-center mt-2" id="projectAddButton">
+                    <button onclick="addNewProject()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-group mt-2">
+                    <label for="">Skills</label>
+                    <textarea id="skillsField" placeholder="Enter skills" class="form-control" rows="5"></textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Generate Resume -->
+        <div class="container text-center my-4">
+            <button onclick="clearForm()" class="btn btn-warning btn-lg">Clear Form</button>
+            <button onclick="generateResume()" class="btn btn-success btn-lg">Generate Resume</button>
+        </div>
+
+    </div>
+
+
+    <!-- Resume Template -->
+    <div class="container-fluid my-5" id="resume-template">
+        <!-- About -->
+        <div class="container-fluid">
+            <h3 id="nameT" style="font-weight: 980;">Shivansh Gupta</h3>
+            <div class="about">
+                <p id="contactT">7837251809</p>
+                <p><a id="linkedinT" href="">shivansh-gupta-22m03/</a></p>
+                <p><a id="githubT" href="">Shivansh220503</a></p>
+                <p><a id="gmailT" href="">7837251809gupta@gmail.com</a></p>
+                <img src="" alt="image" class="img-fluid myimage" id="imgT">
+            </div>
+            <h5>About Me</h5>
+            <hr />
+            <p id="aboutT">I am an enthusiastic web developer</p>
+        </div>
+        <!-- Education -->
+        <div class="container-fluid">
+            <h5>Education</h5>
+            <hr />
+            <ul id="aqT" style="list-style-type: none;">
+                <li>Thapar University ~2025 </li>
+                <li>12 ~2021 </li>
+                <li>10 ~2021 </li>
+            </ul>
+        </div>
+        <!-- Skills -->
+        <div class="container-fluid mt-3">
+            <h5>Skills</h5>
+            <hr />
+            <p id="skillsT">Html, CSS, JS</p>
+        </div>
+        <!-- Experience -->
+        <div class="container-fluid">
+            <h5>Experience</h5>
+            <hr />
+            <ul id="weT" style="list-style-type: none;">
+                <li>Vice Proctor ~Hostel O,J</li>
+                <li>Executive Member ~OWASP</li>
+                <li>Team Member ~Iste</li>
+            </ul>
+        </div>
+        <!-- Projects -->
+        <div class="container-fluid mt-3">
+            <h5>Projects</h5>
+            <hr />
+            <ul id="projectT" style="list-style-type: none;">
+                <li>Ecommerce website </li>
+                <li>ELC Activities</li>
+                <li>Web Development minor projects</li>
+            </ul>
+        </div>
+
+        <div class="container my-4 text-center" id="printResume">
+            <button onclick="backToForm()" class="btn btn-warning btn-lg">Back</button>
+            <button onclick="printResume()" class="btn btn-success btn-lg">Print Resume</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
