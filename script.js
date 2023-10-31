@@ -40,7 +40,9 @@ function generateResume() {
   document.getElementById("linkedinT").innerHTML = document.getElementById("linkedinField").value;
   document.getElementById("githubT").innerHTML = document.getElementById("githubField").value;
   document.getElementById("gmailT").innerHTML = document.getElementById("gmailField").value;
-  document.getElementById("skillsT").innerHTML = document.getElementById("skillsField").value;
+  skillsText = document.getElementById("skillsField").value;
+  skillsHtml = skillsText.replace(/\n/g, '<br>');
+  document.getElementById("skillsT").innerHTML = skillsHtml;
   /* Image 
   let fileInput = document.getElementById("imgField");
   if (fileInput.files.length > 0) {
