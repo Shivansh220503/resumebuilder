@@ -5,6 +5,11 @@
     display: flex;
     justify-content: space-between;
 }
+#contactField::-webkit-inner-spin-button,
+#contactField::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 .myimage{
     float: right;
     border-radius: 50%;
