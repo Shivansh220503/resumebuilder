@@ -37,9 +37,11 @@ function generateResume() {
   document.getElementById("nameT").innerHTML = document.getElementById("nameField").value;
   document.getElementById("contactT").innerHTML = document.getElementById("contactField").value;
   document.getElementById("aboutT").innerHTML = document.getElementById("aboutField").value;
-  document.getElementById("linkedinT").innerHTML = document.getElementById("linkedinField").value;
-  document.getElementById("githubT").innerHTML = document.getElementById("githubField").value;
-  document.getElementById("gmailT").innerHTML = document.getElementById("gmailField").value;
+  document.getElementById("linkedinT").innerHTML = `<a href="https://www.linkedin.com/in/${document.getElementById("linkedinField").value}">${document.getElementById("linkedinField").value}</a>`;
+  document.getElementById("githubT").innerHTML = `<a href="https://github.com/${document.getElementById("githubField").value}">${document.getElementById("githubField").value}</a>`;
+  document.getElementById("gmailT").innerHTML = `<a href="mailto:${document.getElementById("gmailField").value}">${document.getElementById("gmailField").value}</a>`;
+
+
   skillsText = document.getElementById("skillsField").value;
   skillsHtml = skillsText.replace(/\n/g, '<br>');
   document.getElementById("skillsT").innerHTML = skillsHtml;
@@ -57,21 +59,21 @@ function generateResume() {
   let aqs = document.getElementsByClassName("aqField");
   let str1 = '';
   for(let e of aqs){
-    str1 += `<li>${e.value}</li>`;
+    str1 += `<li>${e.value.replace(/\n/g, '<br>')}</li>`;
   }
   document.getElementById("aqT").innerHTML = str1;
   /* Work Experience */
   let wes = document.getElementsByClassName("weField");
   let str2 = '';
   for(let e of wes){
-    str2 += `<li>${e.value}</li>`;
+    str2 += `<li>${e.value.replace(/\n/g, '<br>')}</li>`;
   }
   document.getElementById("weT").innerHTML = str2;
   /* Projects */
   let proj = document.getElementsByClassName("project");
   let str3 = '';
   for(let e of proj){
-    str3 += `<li>${e.value}</li>`;
+    str3 += `<li>${e.value.replace(/\n/g, '<br>')}</li>`;
   }
   document.getElementById("projectT").innerHTML = str3;
 
