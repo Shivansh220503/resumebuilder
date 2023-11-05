@@ -18,20 +18,20 @@
         <div class="row">
 
             <!-- Personal Information -->
-            <div class="col-md-6">
+            <div class="col-md-6 my-3">
 
                 <h3>Personal Information</h3>
-                <div class="form-group">
+                <div class="form-group mt-3">
                     <label for="nameField">Your Name</label>
-                    <input type="text" id="nameField" placeholder="Enter Here" class="form-control">
+                    <input type="text" id="nameField" placeholder="Enter Here" class="form-control mt-1">
                 </div>
-                <div class="form-group mt-2">
+                <div class="form-group mt-3">
                     <label for="contactField">Your Contact</label>
-                    <input type="number" id="contactField" placeholder="Enter Here" class="form-control">
+                    <input type="number" id="contactField" placeholder="Enter Here" class="form-control mt-1">
                 </div>
-                <div class="form-group mt-2">
+                <div class="form-group mt-3">
                     <label for="aboutField">About You</label>
-                    <textarea id="aboutField" placeholder="Write Here" class="form-control" rows="3"></textarea>
+                    <textarea id="aboutField" placeholder="Write Here" class="form-control mt-1" rows="3"></textarea>
                 </div>
 
                 <!-- Profile Image 
@@ -41,36 +41,36 @@
                 </div> -->
                 
                 <!-- Important Links -->
-                <p class="text-secondary mt-4">Important Links</p>
-                <div class="form-group mt-2">
+                <p class="text-secondary mt-3">Important Links</p>
+                <div class="form-group mt-3">
                     <label for="linkedinField">Linkedin Link</label>
-                    <input type="text" id="linkedinField" placeholder="Enter Here" class="form-control">
+                    <input type="text" id="linkedinField" placeholder="Enter Here" class="form-control mt-1">
                 </div>
-                <div class="form-group mt-2">
+                <div class="form-group mt-3">
                     <label for="githubField">Github Link</label>
-                    <input type="text" id="githubField" placeholder="Enter Here" class="form-control">
+                    <input type="text" id="githubField" placeholder="Enter Here" class="form-control mt-1">
                 </div>
-                <div class="form-group mt-2">
+                <div class="form-group mt-3">
                     <label for="gmailField">Mail Link</label>
-                    <input type="text" id="gmailField" placeholder="Enter Here" class="form-control">
+                    <input type="text" id="gmailField" placeholder="Enter Here" class="form-control mt-1">
                 </div>
 
                 <!--Academic Qualification-->
-                <div class="form-group mt-2" id="aq">
+                <div class="form-group mt-3" id="aq">
                     <label for="">Education</label>
                 </div>
-                <div class="container text-center mt-2" id="aqAddButton">
+                <div class="container text-center mt-2 mb-10" id="aqAddButton">
                     <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
                 </div>
 
             </div>
 
             <!-- Professional Information -->
-            <div class="col-md-6">
+            <div class="col-md-6 my-3">
 
                 <h3>Professional Information</h3>
                 <!-- Work Experience -->
-                <div class="form-group mt-2" id="we">
+                <div class="form-group mt-3" id="we">
                     <label for="">Work Experience</label>
                 </div>
                 <div class="container text-center mt-2" id="weAddButton">
@@ -86,9 +86,9 @@
                 </div>
 
                 <!-- Skills -->
-                <div class="form-group mt-2">
+                <div class="form-group mt-3">
                     <label for="">Skills</label>
-                    <textarea id="skillsField" placeholder="Enter skills" class="form-control" rows="5"></textarea>
+                    <textarea id="skillsField" placeholder="Enter skills" class="form-control mt-1" rows="5"></textarea>
                 </div>
 
             </div>
@@ -97,8 +97,8 @@
 
         <!-- Generate Resume -->
         <div class="container text-center my-4">
-            <button onclick="clearForm()" class="btn btn-warning btn-lg">Clear Form</button>
-            <button onclick="generateResume()" class="btn btn-success btn-lg">Generate Resume</button>
+            <button onclick="clearForm()" class="btn btn-warning">Clear Form</button>
+            <button onclick="generateResume()" class="btn btn-success">Generate Resume</button>
         </div>
 
     </div>
@@ -109,21 +109,21 @@
         <!-- About -->
         <div class="container-fluid">
             <h3 id="nameT" style="font-weight: 980;">Shivansh Gupta</h3>
-            <div class="about">
+            <div class="about mt-3">
                 <p id="contactT">7837251809</p>
-                <p><a id="linkedinT" href="">shivansh-gupta-22m03/</a></p>
+                <p><a id="linkedinT" href="">shivansh-gupta-22m03</a></p>
                 <p><a id="githubT" href="">Shivansh220503</a></p>
                 <p><a id="gmailT" href="">7837251809gupta@gmail.com</a></p>
                 <img src="" alt="image" class="img-fluid myimage" id="imgT">
             </div>
-            <h5>About Me</h5>
-            <hr />
+            <h5 class="mt-1">About Me</h5>
+            <hr class="mt-0"/>
             <p id="aboutT">I am an enthusiastic web developer</p>
         </div>
         <!-- Education -->
         <div class="container-fluid">
             <h5>Education</h5>
-            <hr />
+            <hr class="mt-0"/>
             <ul id="aqT" style="list-style-type: none;">
                 <li>Thapar University ~2025 </li>
                 <li>12 ~2021 </li>
@@ -133,13 +133,13 @@
         <!-- Skills -->
         <div class="container-fluid mt-3">
             <h5>Skills</h5>
-            <hr />
+            <hr class="mt-0"/>
             <p id="skillsT">Html, CSS, JS</p>
         </div>
         <!-- Experience -->
         <div class="container-fluid">
             <h5>Experience</h5>
-            <hr />
+            <hr class="mt-0"/>
             <ul id="weT" style="list-style-type: none;">
                 <li>Vice Proctor ~Hostel O,J</li>
                 <li>Executive Member ~OWASP</li>
@@ -149,7 +149,7 @@
         <!-- Projects -->
         <div class="container-fluid mt-3">
             <h5>Projects</h5>
-            <hr />
+            <hr class="mt-0"/>
             <ul id="projectT" style="list-style-type: none;">
                 <li>Ecommerce website </li>
                 <li>ELC Activities</li>
